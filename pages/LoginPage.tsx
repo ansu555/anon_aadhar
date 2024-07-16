@@ -5,7 +5,9 @@ import { LogInWithAnonAadhaar } from '@anon-aadhaar/react'; // Ensure this is co
 
 const LoginPage: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4"
+    style={{ backgroundImage: 'url("/background.jpg")', backgroundSize: 'cover' }}
+    >
       <motion.div
         className="flex flex-col items-center gap-8 bg-white rounded-2xl shadow-lg max-w-screen-sm mx-auto p-8 transition-transform transform hover:scale-105"
         initial={{ opacity: 0, scale: 0.9 }}
