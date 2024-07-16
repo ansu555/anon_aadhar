@@ -1,3 +1,4 @@
+// IndexPage.js
 import { useState } from 'react';
 import Home from './Home'; // Adjust the path according to your project structure
 

@@ -1,6 +1,8 @@
+// MetaMaskPage.js
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import Web3 from "web3";
+import { motion } from 'framer-motion';
 
 function MetaMaskPage() {
   const [account, setAccount] = useState(null);
@@ -90,9 +92,9 @@ function MetaMaskPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="p-4">
+      <div className="p-4 flex flex-col items-center">
         {!account ? (
-          <button
+          <motion.button
             className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded"
             onClick={async () => {
               try {
@@ -101,25 +103,15 @@ function MetaMaskPage() {
                 console.error("Error connecting to MetaMask:", error);
               }
             }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             Connect to MetaMask
-          </button>
+          </motion.button>
         ) : null}
         {account ? (
           <>
-            <button
-              className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded"
-              onClick={getContract}
-            >
-              Get Smart Contract
-            </button>
-            <button
-              className="ml-5 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded"
-              onClick={setContract}
-            >
-              Set Smart Contract
-            </button>
-            <p className="text-gray-700">Your account address: {account}</p>
+            <p className="text-gray-700 mt-4">Your account address: {account}</p>
           </>
         ) : null}
       </div>

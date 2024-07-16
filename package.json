@@ -12,12 +12,18 @@
     "@anon-aadhaar/contracts": "^2.2.4",
     "@anon-aadhaar/core": "^2.2.4",
     "@anon-aadhaar/react": "^2.2.4",
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
+    "@react-three/drei": "^9.108.4",
+    "@react-three/fiber": "^8.16.8",
     "@tanstack/react-query": "^5.51.1",
     "ethers": "^6.13.1",
+    "framer-motion": "^11.3.4",
     "hardhat-dependency-compiler": "^1.2.1",
     "next": "^14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "three": "^0.166.1",
     "viem": "^2.17.4",
     "wagmi": "^1.4.13",
     "web3": "^4.11.0"
@@ -30,7 +36,7 @@
     "eslint-config-next": "14.2.5",
     "hardhat": "^2.22.6",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.5",
     "typescript": "^5"
   }
 }
